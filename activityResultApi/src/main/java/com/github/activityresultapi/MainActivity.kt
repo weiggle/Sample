@@ -22,4 +22,8 @@ class MainActivity : AppCompatActivity() {
     fun requestPermission(view: View) {
         startActivity(Intent(this, RequestPermissionActivity::class.java))
     }
+
+    fun requestMultiPermission(view: View) {
+        startActivity(Intent(this, RequestMultiPermissionActivity::class.java))
+    }
 }

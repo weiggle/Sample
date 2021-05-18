@@ -29,4 +29,14 @@
         android:gravity="center"/>
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:id="@+id/requestMultiPermission"
+        android:text="requestMultiPermission"
+        android:onClick="requestMultiPermission"
+        android:gravity="center"/>
+
+
 </LinearLayout>

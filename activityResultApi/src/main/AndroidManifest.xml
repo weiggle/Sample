@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sample">
-        <activity android:name=".RequestPermissionActivity"></activity>
+        <activity android:name=".RequestMultiPermissionActivity"></activity>
+        <activity android:name=".RequestPermissionActivity" />
         <activity android:name=".TestActivityResultActivity" />
         <activity android:name=".StartActivity" />
         <activity android:name=".MainActivity">
