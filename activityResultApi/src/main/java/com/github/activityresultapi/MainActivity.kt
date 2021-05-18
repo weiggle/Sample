@@ -1,27 +1,21 @@
 package com.github.activityresultapi
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.github.activityresultapi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewBinding: ActivityMainBinding
 
-    val startActity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-
-
     }
 
     fun startActity(view: View) {
-
+        startActivity(Intent(this, StartActivity::class.java))
     }
 }

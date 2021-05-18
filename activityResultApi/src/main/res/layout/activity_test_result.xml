@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartActivity">
-
+    android:background="@android:color/white"
+    tools:context=".TestActivityResultActivity">
 
     <TextView
         android:id="@+id/testIntent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="this is startActivity "
+        android:text="this is test "
         android:textColor="@android:color/background_dark"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@id/testOK"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/darker_gray"
         android:gravity="center"
-        android:text="启动Activity并显示返回结果"
+        android:text="返回上一页"
         android:textColor="@android:color/holo_red_light"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

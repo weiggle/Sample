@@ -10,7 +10,7 @@ object Versions {
     const val lifecycle_version = "1.1.0"
     const val supportVersion = "27.1.0"
     const val fragment_version = "1.3.3"
-    const val activity_version = "1.3.3"
+    const val activity_version = "1.2.2"
 }
 
 object AndroidX {
