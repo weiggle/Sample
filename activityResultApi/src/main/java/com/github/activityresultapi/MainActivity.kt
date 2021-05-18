@@ -18,4 +18,8 @@ class MainActivity : AppCompatActivity() {
     fun startActity(view: View) {
         startActivity(Intent(this, StartActivity::class.java))
     }
+
+    fun requestPermission(view: View) {
+        startActivity(Intent(this, RequestPermissionActivity::class.java))
+    }
 }
