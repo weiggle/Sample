@@ -67,5 +67,14 @@
         android:onClick="pickContact"
         android:text="pickContact" />
 
+    <Button
+        android:id="@+id/getContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:onClick="getContent"
+        android:text="getContent" />
+
 
 </LinearLayout>

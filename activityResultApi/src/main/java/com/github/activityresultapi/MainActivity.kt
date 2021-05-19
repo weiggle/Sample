@@ -38,4 +38,8 @@ class MainActivity : AppCompatActivity() {
     fun pickContact(view: View) {
         startActivity(Intent(this, PickContactActivity::class.java))
     }
+
+    fun getContent(view: View) {
+        startActivity(Intent(this, GetContentActivity::class.java))
+    }
 }

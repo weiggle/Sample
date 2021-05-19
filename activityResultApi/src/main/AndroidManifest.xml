@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sample">
-        <activity android:name=".PickContactActivity"></activity>
+        <activity android:name=".GetContentActivity"></activity>
+        <activity android:name=".PickContactActivity" />
         <activity android:name=".TakePicturePreviewActivity" />
         <activity android:name=".TakePictureActivity" />
         <activity android:name=".RequestMultiPermissionActivity" />
