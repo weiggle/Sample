@@ -49,4 +49,23 @@
         android:text="takePicture" />
 
 
+    <Button
+        android:id="@+id/takePicturePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:onClick="takePicturePreview"
+        android:text="takePicturePreview" />
+
+    <Button
+        android:id="@+id/pickContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:onClick="pickContact"
+        android:text="pickContact" />
+
+
 </LinearLayout>

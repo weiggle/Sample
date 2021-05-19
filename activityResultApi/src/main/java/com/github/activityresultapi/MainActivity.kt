@@ -30,4 +30,12 @@ class MainActivity : AppCompatActivity() {
     fun takePicture(view: View) {
         startActivity(Intent(this, TakePictureActivity::class.java))
     }
+
+    fun takePicturePreview(view: View) {
+        startActivity(Intent(this, TakePicturePreviewActivity::class.java))
+    }
+
+    fun pickContact(view: View) {
+        startActivity(Intent(this, PickContactActivity::class.java))
+    }
 }
