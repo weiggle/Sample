@@ -26,4 +26,8 @@ class MainActivity : AppCompatActivity() {
     fun requestMultiPermission(view: View) {
         startActivity(Intent(this, RequestMultiPermissionActivity::class.java))
     }
+
+    fun takePicture(view: View) {
+        startActivity(Intent(this, TakePictureActivity::class.java))
+    }
 }

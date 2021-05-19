@@ -5,38 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:paddingHorizontal="20dp">
+    android:paddingHorizontal="20dp"
+    tools:context=".MainActivity">
 
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
         android:id="@+id/startActity"
-        android:text="startActity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
         android:onClick="startActity"
-        android:gravity="center"/>
+        android:text="startActity" />
 
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
         android:id="@+id/requestPermission"
-        android:text="RequestPermission"
-        android:onClick="requestPermission"
-        android:gravity="center"/>
-
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:onClick="requestPermission"
+        android:text="RequestPermission" />
+
+
+    <Button
         android:id="@+id/requestMultiPermission"
-        android:text="requestMultiPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
         android:onClick="requestMultiPermission"
-        android:gravity="center"/>
+        android:text="requestMultiPermission" />
+
+
+    <Button
+        android:id="@+id/takePicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:onClick="takePicture"
+        android:text="takePicture" />
 
 
 </LinearLayout>
