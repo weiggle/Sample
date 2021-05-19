@@ -77,4 +77,23 @@
         android:text="getContent" />
 
 
+    <Button
+        android:id="@+id/customActivityContract"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:onClick="customActivityContract"
+        android:text="customActivityContract" />
+
+    <Button
+        android:id="@+id/otherClassUse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:onClick="otherClassUse"
+        android:text="otherClassUse" />
+
+
 </LinearLayout>

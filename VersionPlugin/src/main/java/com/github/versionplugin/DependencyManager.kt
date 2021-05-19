@@ -21,8 +21,7 @@ object AndroidX {
     val material = "com.google.android.material:material:1.3.0"
     val androidx_core_core = "androidx.core:core:1.3.1"
     val cardview = "androidx.cardview:cardview:1.0.0"
-    val runner = "androidx.test:runner:1.2.0"
-    val espresso = "androidx.test.espresso:espresso-core:3.2.0"
+    val lifecycleCommon= "android.arch.lifecycle:common-java8:1.1.1"
 
     // Java language implementation
     val activity = "androidx.activity:activity:${Versions.activity_version}"

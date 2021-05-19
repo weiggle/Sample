@@ -42,4 +42,12 @@ class MainActivity : AppCompatActivity() {
     fun getContent(view: View) {
         startActivity(Intent(this, GetContentActivity::class.java))
     }
+
+    fun otherClassUse(view: View) {
+        startActivity(Intent(this, OtherClassUseActivity::class.java))
+    }
+
+    fun customActivityContract(view: View) {
+        startActivity(Intent(this, CustomActivityContract::class.java))
+    }
 }
