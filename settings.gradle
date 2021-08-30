@@ -2,3 +2,4 @@ include ':activityResultApi'
 include ':app'
 rootProject.name = "Sample"
 includeBuild 'VersionPlugin'
+include ':room'
