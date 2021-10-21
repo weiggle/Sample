@@ -46,3 +46,36 @@ object Kotlin {
     val kotlin_jdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
+
+object Lifecycle {
+    const val lifecycle_version = "2.4.0-rc01"
+    const val arch_version = "2.1.0"
+
+    // ViewModel
+    const val viewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    // LiveData
+    const val livedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    // Lifecycles only (without ViewModel or LiveData)
+    const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+    // Saved state module for ViewModel
+    const val savedstate = "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+
+    // Annotation processor
+    const val compiler = "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    const val common = "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    // optional - helpers for implementing LifecycleOwner in a Service
+    const val service = "androidx.lifecycle:lifecycle-service:$lifecycle_version"
+
+    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+    const val process = "androidx.lifecycle:lifecycle-process:$lifecycle_version"
+
+    // optional - ReactiveStreams support for LiveData
+    const val reactivestreams =
+        "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle_version"
+}
