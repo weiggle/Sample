@@ -16,7 +16,6 @@
           </compositeBuild>
         </compositeConfiguration>
         <option name="testRunner" value="GRADLE" />
-        <option name="disableWrapperSourceDistributionNotification" value="true" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="1.8" />
@@ -26,9 +25,12 @@
             <option value="$PROJECT_DIR$/VersionPlugin" />
             <option value="$PROJECT_DIR$/activityResultApi" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/drawable" />
+            <option value="$PROJECT_DIR$/plugintest" />
             <option value="$PROJECT_DIR$/room" />
           </set>
         </option>
+        <option name="resolveExternalAnnotations" value="false" />
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>

@@ -15,8 +15,11 @@ import com.github.weiggle.speech.TextSpeech
 class MainActivity : AppCompatActivity() {
 
 
+<<<<<<< HEAD
     private val data = mutableListOf<String>()
 
+=======
+>>>>>>> 新增plugin
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

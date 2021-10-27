@@ -1,0 +1,26 @@
+plugins {
+    id 'groovy'
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+
+    //依赖 gradle Api仓库
+    implementation gradleApi()
+    // 依赖 groovy本地仓库
+    implementation localGroovy()
+
+    implementation 'com.android.tools.build:gradle:4.2.1'
+
+
+}
+
+
+// maven仓库group名称
+group = 'com.weiggle.sample'
+// maven仓库插件版本号
+version = '1.0.0'
