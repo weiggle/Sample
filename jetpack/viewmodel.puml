@@ -1,0 +1,12 @@
+@@startuml
+
+ActivityThread -> Activity: performDestroyActivity(r.activity.retainNonConfigurationInstances)   
+Activity -> ComponentActivity: onRetainNonConfigurationInstance()     
+
+newpage
+
+ActivityThread -> Activity: performLaunchActivity(activity.attach)  
+Activity -> ComponentActivity: getLastNonConfigurationInstance
+
+
+@@enduml

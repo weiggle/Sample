@@ -26,6 +26,7 @@
             <option value="$PROJECT_DIR$/activityResultApi" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/drawable" />
+            <option value="$PROJECT_DIR$/jetpack" />
             <option value="$PROJECT_DIR$/plugintest" />
             <option value="$PROJECT_DIR$/room" />
           </set>
