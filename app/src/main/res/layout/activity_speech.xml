@@ -26,5 +26,13 @@
         android:id="@+id/btn"/>
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add new  Speech !"
+        android:textAllCaps="false"
+        android:id="@+id/add"/>
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -25,9 +25,13 @@
             <option value="$PROJECT_DIR$/VersionPlugin" />
             <option value="$PROJECT_DIR$/activityResultApi" />
             <option value="$PROJECT_DIR$/app" />
+<<<<<<< HEAD
             <option value="$PROJECT_DIR$/drawable" />
             <option value="$PROJECT_DIR$/jetpack" />
             <option value="$PROJECT_DIR$/plugintest" />
+=======
+            <option value="$PROJECT_DIR$/compose" />
+>>>>>>> 新增compose
             <option value="$PROJECT_DIR$/room" />
           </set>
         </option>

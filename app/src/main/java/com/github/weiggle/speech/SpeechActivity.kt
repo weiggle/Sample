@@ -22,8 +22,14 @@ class SpeechActivity : AppCompatActivity() {
         textSpeech.initTextToSpeech(this)
         val editText = findViewById<EditText>(R.id.edit)
         findViewById<Button>(R.id.btn).setOnClickListener {
-            textSpeech.speechText(editText.text.toString())
+            textSpeech.speechText()
         }
+
+
+         findViewById<Button>(R.id.add).setOnClickListener {
+            textSpeech.addNewSpeech()
+        }
+
     }
 
     private fun checkPermission() {
