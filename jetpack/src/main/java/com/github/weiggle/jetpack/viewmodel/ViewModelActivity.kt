@@ -21,7 +21,7 @@ class ViewModelActivity : AppCompatActivity() {
 
         mText = findViewById(R.id.text)
         nomalText = findViewById(R.id.normalText)
-        mBtn= findViewById(R.id.btn)
+        mBtn = findViewById(R.id.btn)
         myViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
         myViewModel.myString.observe(this) {
             mText.text = it
@@ -34,22 +34,50 @@ class ViewModelActivity : AppCompatActivity() {
     }
 
 
+    /**
+     *
+     * @author weiggle
+     * @date 2021/11/9 22:00
+     * @param null
+     * @return null
+     */
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         println("method ======> onSaveInstanceState")
     }
 
+    /*
+     *
+     * @author weiggle
+     * @date 2021/11/9 21:58
+     * @param null
+     * @return null
+     */
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         println("method ======> onRestoreInstanceState")
         super.onRestoreInstanceState(savedInstanceState)
     }
 
 
+    /**
+     *
+     * @author weiggle
+     * @date 2021/11/9 21:59
+     * @param null
+     * @return null
+     */
     override fun onRetainCustomNonConfigurationInstance(): Any {
         println("method ======> onRetainCustomNonConfigurationInstance")
         return Any()
     }
 
+    /**
+     *
+     * @author weiggle
+     * @date 2021/11/9 21:59
+     * @param null
+     * @return null
+     */
     override fun getLastNonConfigurationInstance(): Any? {
         println("method ======> getLastNonConfigurationInstance")
         return super.getLastNonConfigurationInstance()
