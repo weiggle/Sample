@@ -1,15 +1,11 @@
 package com.github.versionplugin
 
 import com.github.versionplugin.Versions.kotlin_version
-import com.github.versionplugin.Versions.lifecycle_version
 import com.github.versionplugin.Versions.roomVersion
-import com.github.versionplugin.Versions.supportVersion
 
 
 object Versions {
     const val kotlin_version = "1.4.32"
-    const val lifecycle_version = "1.1.0"
-    const val supportVersion = "27.1.0"
     const val fragment_version = "1.3.3"
     const val activity_version = "1.2.2"
     const val roomVersion = "2.2.5"
@@ -48,7 +44,7 @@ object Kotlin {
 }
 
 object Lifecycle {
-    const val lifecycle_version = "2.3.1"
+    const val lifecycle_version = "2.4.0"
     const val arch_version = "2.1.0"
 
     // ViewModel

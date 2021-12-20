@@ -18,24 +18,19 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/VersionPlugin" />
             <option value="$PROJECT_DIR$/activityResultApi" />
             <option value="$PROJECT_DIR$/app" />
-<<<<<<< HEAD
+            <option value="$PROJECT_DIR$/compose" />
             <option value="$PROJECT_DIR$/drawable" />
             <option value="$PROJECT_DIR$/jetpack" />
             <option value="$PROJECT_DIR$/plugintest" />
-=======
-            <option value="$PROJECT_DIR$/compose" />
->>>>>>> 新增compose
             <option value="$PROJECT_DIR$/room" />
           </set>
         </option>
-        <option name="resolveExternalAnnotations" value="false" />
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>

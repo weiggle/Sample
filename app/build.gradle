@@ -4,13 +4,13 @@ import com.github.versionplugin.Lifecycle
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'android-aspectjx'
-    id 'hello-demo'
+//    id 'android-aspectjx'
+//    id 'hello-demo'
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 31
+    buildToolsVersion "31.0.3"
 
     defaultConfig {
         applicationId "com.github.weiggle"
@@ -40,15 +40,20 @@ android {
         viewBinding = true
     }
 
-    greeting {
-        message = "vwlk jn ke w ==========>"
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
     }
+
+//    greeting {
+//        message = "vwlk jn ke w ==========>"
+//    }
 }
 
 dependencies {
-    implementation "org.aspectj:aspectjrt:1.9.1"
+    api 'com.alibaba.android.workbench:easymnn:0.1.2' //13.5 MB
+//    implementation "org.aspectj:aspectjrt:1.9.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation AndroidX.androidx_core_ktx
+//    implementation AndroidX.androidx_core_ktx
     implementation AndroidX.androidx_appcompat
     implementation AndroidX.material
     implementation AndroidX.androidx_constraint

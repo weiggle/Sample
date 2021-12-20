@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.observe
 import com.github.weiggle.jetpack.R
+import com.github.weiggle.jetpack.observer.CustomLifeOwner
 
 class ViewModelActivity : AppCompatActivity() {
 
@@ -15,10 +18,13 @@ class ViewModelActivity : AppCompatActivity() {
     lateinit var mBtn: Button
     var index = 0
 
+    lateinit var cutsomOwner: CustomLifeOwner
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_model)
 
+        initLifeOwner()
         mText = findViewById(R.id.text)
         nomalText = findViewById(R.id.normalText)
         mBtn = findViewById(R.id.btn)
@@ -26,11 +32,20 @@ class ViewModelActivity : AppCompatActivity() {
         myViewModel.myString.observe(this) {
             mText.text = it
         }
+        myViewModel.myString.observe(this, Observer {
+
+        })
         mBtn.setOnClickListener {
             index++
             myViewModel.setData("this is viewModel===>$index")
             nomalText.text = "this is normal data===>$index"
+            cutsomOwner.setData("from======ViewModelActivity=====>$index")
         }
+    }
+
+    private fun initLifeOwner() {
+        cutsomOwner  = CustomLifeOwner()
+        cutsomOwner.show()
     }
 
 

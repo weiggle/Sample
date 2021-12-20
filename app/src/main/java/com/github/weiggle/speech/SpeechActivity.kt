@@ -2,11 +2,11 @@ package com.github.weiggle.speech
 
 import android.Manifest
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.github.weiggle.R
@@ -26,15 +26,19 @@ class SpeechActivity : AppCompatActivity() {
         }
 
 
-         findViewById<Button>(R.id.add).setOnClickListener {
+        findViewById<Button>(R.id.add).setOnClickListener {
             textSpeech.addNewSpeech()
         }
 
     }
 
     private fun checkPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
-         Toast.makeText(this, "已经拥有权限", Toast.LENGTH_SHORT).show()
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.RECORD_AUDIO
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            Toast.makeText(this, "已经拥有权限", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "没有权限", Toast.LENGTH_SHORT).show()
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.RECORD_AUDIO), 100)

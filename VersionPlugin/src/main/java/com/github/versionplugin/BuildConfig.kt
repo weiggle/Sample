@@ -4,8 +4,8 @@ package com.github.versionplugin
  *  配置和 Build 相关的 版本信息
  */
 object BuildConfig {
-    const val compileSdkVersion = 28
-    const val buildToolsVersion = "29.0.3"
+    const val compileSdkVersion = 31
+    const val buildToolsVersion = "31.0.3"
     const val minSdkVersion = 18
     const val targetSdkVersion = 28
     const val versionCode = 10000

@@ -7,19 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.weiggle.mnn.MnnActivity
 import com.github.weiggle.speech.SpeechActivity
 import com.github.weiggle.speech.TextSpeech
+import com.github.weiggle.utils.DataUtils
 
 class MainActivity : AppCompatActivity() {
 
 
-<<<<<<< HEAD
     private val data = mutableListOf<String>()
 
-=======
->>>>>>> 新增plugin
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             MyAdapter {
                 var clazz = when (it) {
                     0 -> SpeechActivity::class.java
+                    1 -> MnnActivity::class.java
                     else -> SpeechActivity::class.java
                 }
 
@@ -42,10 +43,23 @@ class MainActivity : AppCompatActivity() {
             this.adapter = adapter
         }
 
+        lifecycleScope.launchWhenCreated {
+            println("lifecycleScope==============>launchWhenCreated")
+        }
+        lifecycleScope.launchWhenResumed {
+            println("lifecycleScope==============>launchWhenResumed")
+        }
+        lifecycleScope.launchWhenStarted {
+            println("lifecycleScope==============>launchWhenStarted")
+        }
+        val time = "2005-11-16"
+        val timeInterval = DataUtils.getTimeInterval(time)
+        println("tine=============$time====>$timeInterval")
     }
 
     private fun initData() {
         data.add("SpeechActivity")
+        data.add("MnnActivity")
     }
 
 
