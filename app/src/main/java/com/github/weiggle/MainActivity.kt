@@ -1,19 +1,23 @@
 package com.github.weiggle
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.weiggle.ads.AdsActivity
+import com.github.weiggle.drawable.shapeDrawable
 import com.github.weiggle.mnn.MnnActivity
+import com.github.weiggle.pools.ObjectPoolsActivity
 import com.github.weiggle.speech.SpeechActivity
-import com.github.weiggle.speech.TextSpeech
-import com.github.weiggle.utils.DataUtils
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +33,8 @@ class MainActivity : AppCompatActivity() {
                 var clazz = when (it) {
                     0 -> SpeechActivity::class.java
                     1 -> MnnActivity::class.java
+                    2 -> AdsActivity::class.java
+                    3 -> ObjectPoolsActivity::class.java
                     else -> SpeechActivity::class.java
                 }
 
@@ -52,14 +58,19 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launchWhenStarted {
             println("lifecycleScope==============>launchWhenStarted")
         }
-        val time = "2005-11-16"
-        val timeInterval = DataUtils.getTimeInterval(time)
-        println("tine=============$time====>$timeInterval")
+
+        lifecycleScope.launch {
+            lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                println("lifecycleScope======================>this is resume")
+            }
+        }
     }
 
     private fun initData() {
         data.add("SpeechActivity")
         data.add("MnnActivity")
+        data.add("AdsActivity")
+        data.add("ObjectPoolsActivity")
     }
 
 
@@ -70,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
             return MyViewHolder(
-                LayoutInflater.from(parent.context).inflate(R.layout.layout_list_item, null, false)
+                LayoutInflater.from(parent.context).inflate(R.layout.layout_list_item, parent, false)
             )
         }
 

@@ -33,6 +33,8 @@ android {
     }
 }
 
+println("build gradle name:======> " + gradle.class.name)
+
 dependencies {
 
     implementation AndroidX.activity_ktx

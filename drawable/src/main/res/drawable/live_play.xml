@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/living_000"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_001"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_002"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_003"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_004"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_005"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_006"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_007"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_008"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_009"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_010"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_011"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_012"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_013"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_014"
+        android:duration="37" />
+    <item
+        android:drawable="@drawable/living_015"
+        android:duration="37" />
+
+</animation-list>

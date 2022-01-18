@@ -5,7 +5,7 @@ package com.github.versionplugin
  */
 object BuildConfig {
     const val compileSdkVersion = 31
-    const val buildToolsVersion = "31.0.3"
+    const val buildToolsVersion = "31.0.2"
     const val minSdkVersion = 18
     const val targetSdkVersion = 28
     const val versionCode = 10000

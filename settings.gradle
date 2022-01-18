@@ -7,3 +7,5 @@ include ':drawable'
 include ':plugintest'
 include ':jetpack'
 include ':compose'
+
+println("setting gradle name:======> " + gradle.class.name)
