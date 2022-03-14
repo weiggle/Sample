@@ -3,7 +3,6 @@ package com.github.weiggle.aspectj;
 import android.util.Log;
 
 
-
 /**
  * @author wei.li
  * @created on 2021/9/2

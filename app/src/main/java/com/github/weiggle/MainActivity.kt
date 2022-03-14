@@ -13,11 +13,11 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.weiggle.ads.AdsActivity
-import com.github.weiggle.drawable.shapeDrawable
 import com.github.weiggle.mnn.MnnActivity
 import com.github.weiggle.pools.ObjectPoolsActivity
 import com.github.weiggle.speech.SpeechActivity
 import kotlinx.coroutines.launch
+import com.github.weiggle.speech.filter.InputFilerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                     1 -> MnnActivity::class.java
                     2 -> AdsActivity::class.java
                     3 -> ObjectPoolsActivity::class.java
+                    4 -> InputFilerActivity::class.java
                     else -> SpeechActivity::class.java
                 }
 
@@ -71,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         data.add("MnnActivity")
         data.add("AdsActivity")
         data.add("ObjectPoolsActivity")
+        data.add("InputFilerActivity")
     }
 
 

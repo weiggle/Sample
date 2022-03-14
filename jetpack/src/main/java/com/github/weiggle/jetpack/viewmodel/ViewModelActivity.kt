@@ -9,14 +9,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import com.github.weiggle.jetpack.R
 import com.github.weiggle.jetpack.observer.CustomLifeOwner
+import kotlin.random.Random
 
 class ViewModelActivity : AppCompatActivity() {
 
     lateinit var myViewModel: MyViewModel
-    lateinit var mText: TextView
-    lateinit var nomalText: TextView
-    lateinit var mBtn: Button
-    var index = 0
+//    lateinit var mText: TextView
+//    lateinit var nomalText: TextView
+//    lateinit var mBtn: Button
+//    var index = 0
 
     lateinit var cutsomOwner: CustomLifeOwner
 
@@ -25,26 +26,57 @@ class ViewModelActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_model)
 
         initLifeOwner()
-        mText = findViewById(R.id.text)
-        nomalText = findViewById(R.id.normalText)
-        mBtn = findViewById(R.id.btn)
+//        mText = findViewById(R.id.text)
+//        nomalText = findViewById(R.id.normalText)
+//        mBtn = findViewById(R.id.btn)
         myViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
         myViewModel.myString.observe(this) {
-            mText.text = it
+            println("myString===========>${it}")
         }
         myViewModel.myString.observe(this, Observer {
 
         })
-        mBtn.setOnClickListener {
-            index++
-            myViewModel.setData("this is viewModel===>$index")
-            nomalText.text = "this is normal data===>$index"
-            cutsomOwner.setData("from======ViewModelActivity=====>$index")
+
+//        mBtn.setOnClickListener {
+//            index++
+//            myViewModel.setData("this is viewModel===>$index")
+//            nomalText.text = "this is normal data===>$index"
+//        }
+        initBtn(R.id.btn) {
+            myViewModel.addSource()
         }
+
+        initBtn(R.id.btn2) {
+            myViewModel.secondSource()
+        }
+
+        initBtn(R.id.btn3) {
+            myViewModel.removeSource()
+        }
+
+        initBtn(R.id.btn4) {
+            myViewModel.removeSecondSource()
+        }
+
+        initBtn(R.id.btn5) {
+            myViewModel.testSource().observe(this) {
+                println("source method===========>")
+            }
+            myViewModel.setData(Random(1000).toString())
+        }
+
+        initBtn(R.id.btn6) {
+            myViewModel.setSecond(Random(1000).nextInt())
+        }
+
+    }
+
+    fun initBtn(resId: Int, block: () -> Unit) {
+        findViewById<Button>(resId).setOnClickListener { block.invoke() }
     }
 
     private fun initLifeOwner() {
-        cutsomOwner  = CustomLifeOwner()
+        cutsomOwner = CustomLifeOwner()
         cutsomOwner.show()
     }
 

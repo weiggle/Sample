@@ -75,3 +75,8 @@ object Lifecycle {
     const val reactivestreams =
         "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle_version"
 }
+
+object Paging3 {
+    const val paging_version = "3.1.0"
+    const val runtime = "androidx.paging:paging-runtime:$paging_version"
+}
