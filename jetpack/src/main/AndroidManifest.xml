@@ -13,7 +13,7 @@
 <!--            android:name=".viewmodel.ViewModelActivity"-->
 <!--            android:exported="true" />-->
         <activity
-            android:name=".viewmodel.ViewModelActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

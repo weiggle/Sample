@@ -13,7 +13,7 @@ object Versions {
 
 object AndroidX {
     val androidx_appcompat = "androidx.appcompat:appcompat:1.2.0"
-    val androidx_recyclerview = "androidx.recyclerview:recyclerview:1.1.0"
+    val androidx_recyclerview = "androidx.recyclerview:recyclerview:1.2.1"
     val androidx_constraint = "androidx.constraintlayout:constraintlayout:2.0.4"
     val androidx_core_ktx = "androidx.core:core-ktx:1.3.2"
     val material = "com.google.android.material:material:1.3.0"

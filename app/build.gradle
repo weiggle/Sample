@@ -67,6 +67,7 @@ dependencies {
     implementation AndroidX.androidx_constraint
     implementation AndroidX.activity_ktx
     implementation AndroidX.fragment_ktx
+    implementation AndroidX.androidx_recyclerview
     implementation Lifecycle.common
     implementation Lifecycle.reactivestreams
     implementation Lifecycle.runtimeKtx

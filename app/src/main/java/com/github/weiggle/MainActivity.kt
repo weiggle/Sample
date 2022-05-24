@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.weiggle.ads.AdsActivity
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val adapter: MyAdapter by lazy {
+        val myAdapterr: MyAdapter by lazy {
             MyAdapter {
                 var clazz = when (it) {
                     0 -> SpeechActivity::class.java
@@ -43,11 +44,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         initData()
-        adapter.data = data
+        myAdapterr.data = data
+        val headerAdapter = HeaderAdapter()
+        val footerAdapter = FooterAdapter()
+        val concatAdapter = ConcatAdapter(headerAdapter,myAdapterr, footerAdapter)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            this.adapter = adapter
+            this.adapter = concatAdapter
         }
 
         lifecycleScope.launchWhenCreated {
@@ -83,7 +87,8 @@ class MainActivity : AppCompatActivity() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
             return MyViewHolder(
-                LayoutInflater.from(parent.context).inflate(R.layout.layout_list_item, parent, false)
+                LayoutInflater.from(parent.context)
+                    .inflate(R.layout.layout_list_item, parent, false)
             )
         }
 
@@ -98,8 +103,42 @@ class MainActivity : AppCompatActivity() {
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         var textView: TextView = itemView.findViewById(R.id.textView)
+    }
 
+    class HeaderAdapter : RecyclerView.Adapter<HeaderAdapter.MyViewHolder>() {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+            return MyViewHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.header_layout, parent, false)
+            )
+        }
+
+        override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        }
+
+        override fun getItemCount(): Int {
+            return 1
+        }
+
+        class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        }
+    }
+
+    class FooterAdapter : RecyclerView.Adapter<FooterAdapter.MyViewHolder>() {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+            return MyViewHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.footer_layout, parent, false)
+            )
+        }
+
+        override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        }
+
+        override fun getItemCount(): Int {
+            return 1
+        }
+
+        class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        }
     }
 }

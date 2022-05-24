@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="shadowlayout">
+        <attr format="integer" name="sl_shadow_type">
+            <flag name="all" value="0"/>
+            <flag name="left" value="1"/>
+            <flag name="top" value="2"/>
+            <flag name="right" value="3"/>
+            <flag name="bottom" value="4"/>
+        </attr>
+        <attr format="dimension" name="sl_cornerRadius"/>
+        <attr format="dimension" name="sl_dx"/>
+        <attr format="dimension" name="sl_dy"/>
+        <attr format="reference|color" name="sl_shadowColor"/>
+        <attr format="reference|color" name="sl_selected_shadowColor"/>
+        <attr format="dimension" name="sl_shadowRadius"/>
+    </declare-styleable>
+</resources>
