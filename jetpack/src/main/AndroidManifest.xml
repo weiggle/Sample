@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sample">
-<!--        <activity-->
-<!--            android:name=".viewmodel.ViewModelActivity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".TestIntervalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewmodel.ViewModelActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

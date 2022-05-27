@@ -43,6 +43,7 @@ class ViewModelActivity : AppCompatActivity() {
 //            nomalText.text = "this is normal data===>$index"
 //        }
         initBtn(R.id.btn) {
+            cutsomOwner.setData("tdibciwbvciebvie")
             myViewModel.addSource()
         }
 

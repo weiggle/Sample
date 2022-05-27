@@ -1,11 +1,7 @@
 import com.github.versionplugin.AndroidX
-<<<<<<< HEAD
 import com.github.versionplugin.BuildConfig
 import com.github.versionplugin.Lifecycle
-=======
-import com.github.versionplugin.Lifecycle
 import com.github.versionplugin.Paging3
->>>>>>> 优化
 
 plugins {
     id 'com.android.application'
@@ -52,10 +48,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation AndroidX.activity_ktx
     implementation AndroidX.fragment_ktx
-<<<<<<< HEAD
     implementation Lifecycle.runtimeKtx
-=======
     implementation Lifecycle.livedataKtx
-//    implementation Paging3.runtime
->>>>>>> 优化
 }

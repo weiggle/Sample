@@ -6,11 +6,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 //    id 'android-aspectjx'
-<<<<<<< HEAD
 //    id 'hello-demo'
-=======
-    id 'hello-demo'
->>>>>>> 优化
 }
 
 android {
@@ -55,10 +51,7 @@ android {
 }
 
 dependencies {
-<<<<<<< HEAD
     api 'com.alibaba.android.workbench:easymnn:0.1.2' //13.5 MB
-=======
->>>>>>> 优化
 //    implementation "org.aspectj:aspectjrt:1.9.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 //    implementation AndroidX.androidx_core_ktx

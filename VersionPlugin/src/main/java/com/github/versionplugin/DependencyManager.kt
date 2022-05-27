@@ -44,7 +44,7 @@ object Kotlin {
 }
 
 object Lifecycle {
-    const val lifecycle_version = "2.4.0"
+    const val lifecycle_version = "2.4.1"
     const val arch_version = "2.1.0"
 
     // ViewModel
