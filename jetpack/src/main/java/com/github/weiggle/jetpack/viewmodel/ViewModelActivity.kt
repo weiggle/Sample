@@ -4,17 +4,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
 import com.github.weiggle.jetpack.R
 import com.github.weiggle.jetpack.observer.CustomLifeOwner
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 class ViewModelActivity : AppCompatActivity() {
 
     lateinit var myViewModel: MyViewModel
-//    lateinit var mText: TextView
+    lateinit var mText: TextView
 //    lateinit var nomalText: TextView
 //    lateinit var mBtn: Button
 //    var index = 0
@@ -26,7 +31,7 @@ class ViewModelActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_model)
 
         initLifeOwner()
-//        mText = findViewById(R.id.text)
+        mText = findViewById(R.id.text)
 //        nomalText = findViewById(R.id.normalText)
 //        mBtn = findViewById(R.id.btn)
         myViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
@@ -37,15 +42,32 @@ class ViewModelActivity : AppCompatActivity() {
 
         })
 
+        findViewById<Button>(R.id.btn).setOnClickListener {   myViewModel.ss(3) }
+
+
+        lifecycleScope.launch {
+//            myViewModel.countDownFlow.collectLatest {
+//                mText.text = "this is value ====> $it"
+//            }
+
+            myViewModel.stateFlow.collect {
+                Toast.makeText(this@ViewModelActivity, "$it", Toast.LENGTH_SHORT).show()
+                mText.text= "this is value ==> $it"
+            }
+        }
+
+
 //        mBtn.setOnClickListener {
 //            index++
 //            myViewModel.setData("this is viewModel===>$index")
 //            nomalText.text = "this is normal data===>$index"
 //        }
-        initBtn(R.id.btn) {
-            cutsomOwner.setData("tdibciwbvciebvie")
-            myViewModel.addSource()
-        }
+//        initBtn(R.id.btn) {
+////            cutsomOwner.setData("tdibciwbvciebvie")
+//            myViewModel.incrementCounter()
+//        }
+
+
 
         initBtn(R.id.btn2) {
             myViewModel.secondSource()

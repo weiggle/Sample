@@ -9,3 +9,4 @@ include ':jetpack'
 include ':compose'
 include ':json'
 println("setting gradle name:======> " + gradle.class.name)
+include ':algorithm'
